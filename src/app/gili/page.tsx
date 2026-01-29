@@ -1,18 +1,10 @@
 import { PostCard } from '@/components/gili/PostCard'
+import { getPosts } from '@/lib/db'
 
-// נתונים זמניים עד שנחבר את ה-Database
-const mockPosts = [
-  {
-    id: 1,
-    title: 'היום הראשון שלי באתר!',
-    content: 'שלום לכולם! 👋 אני גילי ואני בת 7. זה האתר החדש שלי! פה אני אשתף את הציורים שלי, סיפורים ועוד דברים מגניבים. מקווה שתהנו! 🌈',
-    image_url: null,
-    created_at: new Date().toISOString(),
-    likes_count: 5,
-  },
-]
+export const dynamic = 'force-dynamic'
 
-export default function GiliHomePage() {
+export default async function GiliHomePage() {
+  const posts = await getPosts('gili')
   return (
     <div>
       {/* Hero Section */}
@@ -42,12 +34,12 @@ export default function GiliHomePage() {
         </h3>
 
         <div className="space-y-6">
-          {mockPosts.map((post) => (
+          {posts.map((post: any) => (
             <PostCard key={post.id} post={post} />
           ))}
         </div>
 
-        {mockPosts.length === 0 && (
+        {posts.length === 0 && (
           <div className="text-center py-12 text-slate-500">
             <p className="text-4xl mb-4">🦋</p>
             <p>עוד אין פוסטים... בקרוב!</p>
