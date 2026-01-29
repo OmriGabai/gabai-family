@@ -25,18 +25,6 @@ export function PostCard({ post }: { post: Post }) {
 
   return (
     <article className="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-pink-100 hover:border-gili-pink/50 transition-colors">
-      {/* Image */}
-      {post.image_url && (
-        <div className="relative h-64 w-full">
-          <Image
-            src={post.image_url}
-            alt={post.title}
-            fill
-            className="object-cover"
-          />
-        </div>
-      )}
-
       {/* Content */}
       <div className="p-6">
         <h4 className="text-xl font-bold text-gili-purple mb-2">
@@ -46,6 +34,19 @@ export function PostCard({ post }: { post: Post }) {
         <p className="text-slate-600 mb-4 whitespace-pre-line">
           {post.content}
         </p>
+
+        {/* Image - below content, full size */}
+        {post.image_url && (
+          <div className="relative w-full mb-4">
+            <Image
+              src={post.image_url}
+              alt={post.title}
+              width={800}
+              height={600}
+              className="w-full h-auto rounded-2xl"
+            />
+          </div>
+        )}
 
         <div className="flex items-center justify-between pt-4 border-t border-pink-100">
           <time className="text-sm text-slate-400">
