@@ -10,10 +10,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Password required' }, { status: 400 })
     }
 
+    // Debug: check if env var exists
+    const envExists = !!process.env.ADMIN_PASSWORD
+    const envLength = process.env.ADMIN_PASSWORD?.length || 0
+    console.log(`Debug: ADMIN_PASSWORD exists=${envExists}, length=${envLength}, input length=${password.length}`)
+
     const valid = await verifyPassword(password)
 
     if (!valid) {
-      return NextResponse.json({ error: 'Invalid password' }, { status: 401 })
+      return NextResponse.json({
+        error: 'Invalid password',
+        debug: { envExists, envLength, inputLength: password.length }
+      }, { status: 401 })
     }
 
     await createSession()
