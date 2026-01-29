@@ -1,15 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { SecretButterfly } from '@/components/gili/SecretButterfly'
 
 export const metadata: Metadata = {
   title: 'העולם המופלא של גילי',
   description: 'האתר של גילי - יצירות, מחשבות וחוויות',
-}
-
-function Butterfly({ className }: { className?: string }) {
-  return (
-    <span className={`butterfly inline-block ${className}`}>🦋</span>
-  )
 }
 
 function HelloKitty({ className }: { className?: string }) {
@@ -34,9 +29,9 @@ export default function GiliLayout({
       {/* Header */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-4 right-10"><Butterfly /></div>
-          <div className="absolute top-12 left-20"><Butterfly className="text-2xl" /></div>
-          <div className="absolute top-6 left-1/3"><Butterfly className="text-xl" /></div>
+          <SecretButterfly className="absolute top-4 right-10" />
+          <SecretButterfly className="absolute top-12 left-20 text-2xl" />
+          <SecretButterfly className="absolute top-6 left-1/3 text-xl" />
           <div className="absolute top-8 right-1/4"><HelloKitty className="text-2xl" /></div>
           <div className="absolute top-14 left-10"><HelloKitty className="text-xl" /></div>
         </div>
