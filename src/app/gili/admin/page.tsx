@@ -1,0 +1,74 @@
+'use client'
+
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+
+export default function AdminLoginPage() {
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
+  const router = useRouter()
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError('')
+    setLoading(true)
+
+    try {
+      const res = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      })
+
+      if (res.ok) {
+        router.push('/gili/admin/posts')
+      } else {
+        setError('סיסמא שגויה')
+      }
+    } catch {
+      setError('שגיאה בהתחברות')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="bg-white rounded-3xl shadow-lg p-8 w-full max-w-md border-2 border-pink-100">
+        <h2 className="text-2xl font-bold text-gili-purple text-center mb-6">
+          🔐 כניסת אדמין
+        </h2>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-slate-700 mb-2">
+              סיסמא
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border-2 border-pink-200 focus:border-gili-purple focus:outline-none transition-colors"
+              placeholder="הכניסי את הסיסמא..."
+              required
+            />
+          </div>
+
+          {error && (
+            <p className="text-red-500 text-sm text-center">{error}</p>
+          )}
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-gili-pink to-gili-purple text-white font-bold hover:opacity-90 transition-opacity disabled:opacity-50"
+          >
+            {loading ? '🔄 מתחברת...' : '✨ כניסה'}
+          </button>
+        </form>
+      </div>
+    </div>
+  )
+}
