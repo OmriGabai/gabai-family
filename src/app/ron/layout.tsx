@@ -32,38 +32,38 @@ export default function RonLayout({
         <Star className="absolute top-40 left-10 text-xs opacity-50" />
         <Star className="absolute top-80 right-10 text-sm opacity-30" />
 
-        {/* Walking crewmates - one of each color */}
+        {/* Walking crewmates - one of each color, same size and opacity */}
         <Image src="/images/ron/crewmate.png" alt="Red" width={50} height={50}
-          className="absolute top-32 opacity-30 walk-right"
-          style={{ animationDelay: '0s' }} />
+          className="top-28 opacity-25 walk-right"
+          style={{ animationDelay: '0s', animationDuration: '20s' }} />
 
-        <Image src="/images/ron/crewmate-blue.png" alt="Blue" width={45} height={45}
-          className="absolute top-52 opacity-25 walk-left"
-          style={{ animationDelay: '-5s' }} />
+        <Image src="/images/ron/crewmate-blue.png" alt="Blue" width={50} height={50}
+          className="top-44 opacity-25 walk-left"
+          style={{ animationDelay: '-5s', animationDuration: '22s' }} />
 
-        <Image src="/images/ron/crewmate-cyan.png" alt="Cyan" width={55} height={55}
-          className="absolute top-72 opacity-30 walk-right-slow"
-          style={{ animationDelay: '-12s' }} />
+        <Image src="/images/ron/crewmate-cyan.png" alt="Cyan" width={50} height={50}
+          className="top-60 opacity-25 walk-right"
+          style={{ animationDelay: '-10s', animationDuration: '28s' }} />
 
-        <Image src="/images/ron/crewmate-green.png" alt="Green" width={40} height={40}
-          className="absolute top-96 opacity-20 walk-left-slow"
-          style={{ animationDelay: '-8s' }} />
+        <Image src="/images/ron/crewmate-green.png" alt="Green" width={50} height={50}
+          className="top-80 opacity-25 walk-left"
+          style={{ animationDelay: '-3s', animationDuration: '24s' }} />
 
         <Image src="/images/ron/crewmate-yellow.png" alt="Yellow" width={50} height={50}
-          className="absolute bottom-72 opacity-25 walk-right-fast"
-          style={{ animationDelay: '-3s' }} />
+          className="bottom-64 opacity-25 walk-right"
+          style={{ animationDelay: '-15s', animationDuration: '18s' }} />
 
-        <Image src="/images/ron/crewmate-orange.png" alt="Orange" width={45} height={45}
-          className="absolute bottom-52 opacity-30 walk-left"
-          style={{ animationDelay: '-15s' }} />
+        <Image src="/images/ron/crewmate-orange.png" alt="Orange" width={50} height={50}
+          className="bottom-48 opacity-25 walk-left"
+          style={{ animationDelay: '-8s', animationDuration: '26s' }} />
 
-        <Image src="/images/ron/crewmate-pink.png" alt="Pink" width={55} height={55}
-          className="absolute bottom-32 opacity-20 walk-right"
-          style={{ animationDelay: '-10s' }} />
+        <Image src="/images/ron/crewmate-pink.png" alt="Pink" width={50} height={50}
+          className="bottom-32 opacity-25 walk-right"
+          style={{ animationDelay: '-12s', animationDuration: '21s' }} />
 
         <Image src="/images/ron/crewmate-black.png" alt="Black" width={50} height={50}
-          className="absolute top-[45%] opacity-35 walk-left-slow"
-          style={{ animationDelay: '-18s' }} />
+          className="top-[50%] opacity-25 walk-left"
+          style={{ animationDelay: '-18s', animationDuration: '30s' }} />
       </div>
 
       {/* Header */}

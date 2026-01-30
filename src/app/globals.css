@@ -130,47 +130,29 @@ body {
 /* Among Us walking animations */
 @keyframes walkRight {
   0% {
-    transform: translateX(-100px) scaleX(1);
+    left: -80px;
   }
   100% {
-    transform: translateX(calc(100vw + 100px)) scaleX(1);
+    left: 100vw;
   }
 }
 
 @keyframes walkLeft {
   0% {
-    transform: translateX(calc(100vw + 100px)) scaleX(-1);
+    right: -80px;
   }
   100% {
-    transform: translateX(-100px) scaleX(-1);
-  }
-}
-
-@keyframes walkBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
+    right: 100vw;
   }
 }
 
 .walk-right {
-  animation: walkRight 20s linear infinite, walkBounce 0.4s ease-in-out infinite;
+  animation: walkRight 25s linear infinite;
+  position: absolute;
 }
 
 .walk-left {
-  animation: walkLeft 20s linear infinite, walkBounce 0.4s ease-in-out infinite;
-}
-
-.walk-right-slow {
-  animation: walkRight 30s linear infinite, walkBounce 0.5s ease-in-out infinite;
-}
-
-.walk-left-slow {
-  animation: walkLeft 25s linear infinite, walkBounce 0.45s ease-in-out infinite;
-}
-
-.walk-right-fast {
-  animation: walkRight 15s linear infinite, walkBounce 0.35s ease-in-out infinite;
+  animation: walkLeft 25s linear infinite;
+  transform: scaleX(-1);
+  position: absolute;
 }
