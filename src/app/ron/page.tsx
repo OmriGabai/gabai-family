@@ -53,7 +53,7 @@ export default async function RonHomePage() {
           <div className="text-center py-12 text-slate-400 bg-slate-800/50 rounded-3xl border border-cyan-500/30">
             <p className="text-4xl mb-4">🛸</p>
             <p>אין משימות עדיין...</p>
-            <p className="text-sm mt-2 text-cyan-400/50" dir="ltr">. was ejected.</p>
+            <p className="text-sm mt-2 text-cyan-400/50 text-center" dir="ltr">Ron was ejected. 🚀</p>
           </div>
         )}
       </section>

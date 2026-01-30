@@ -103,8 +103,8 @@ export default function RonLayout({
       {/* Footer */}
       <footer className="border-t border-cyan-500/30 bg-slate-900/50 mt-12">
         <div className="max-w-4xl mx-auto px-4 py-6 text-center">
-          <p className="text-cyan-400/50" dir="ltr">
-            🛸 . was not The Impostor 💀
+          <p className="text-cyan-400/50 text-center" dir="ltr">
+            🛸 Ron was not The Impostor 💀
           </p>
         </div>
       </footer>
