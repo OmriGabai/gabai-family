@@ -45,7 +45,7 @@ export default function RonLayout({
             <h1 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-400 to-cyan-400">
               🚀 החללית של רון 👨‍🚀
             </h1>
-            <p className="text-sm text-cyan-400/70 mt-1">Trust no one... 🔪</p>
+            <p className="text-sm text-cyan-400/70 mt-1" dir="ltr">Trust no one... 🔪</p>
           </Link>
           <div className="mt-4 h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-cyan-500 rounded-full" />
         </div>
@@ -77,7 +77,7 @@ export default function RonLayout({
       {/* Footer */}
       <footer className="border-t border-cyan-500/30 bg-slate-900/50 mt-12">
         <div className="max-w-4xl mx-auto px-4 py-6 text-center">
-          <p className="text-cyan-400/50">
+          <p className="text-cyan-400/50" dir="ltr">
             🛸 . was not The Impostor 💀
           </p>
         </div>

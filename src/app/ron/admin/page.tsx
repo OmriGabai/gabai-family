@@ -24,7 +24,7 @@ export default function AdminLoginPage() {
       if (res.ok) {
         router.push('/ron/admin/posts')
       } else {
-        setError('סיסמא שגויה... sus! 🔪')
+        setError('סיסמא שגויה... 🔪 sus!')
       }
     } catch {
       setError('שגיאה בהתחברות')
