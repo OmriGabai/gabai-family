@@ -10,7 +10,7 @@ export default async function RonHomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="text-center mb-12 p-8 rounded-3xl bg-gradient-to-r from-red-500/20 via-slate-800/50 to-cyan-500/20 border border-cyan-500/30 relative overflow-hidden">
+      <section className="text-center mb-12 p-8 rounded-3xl bg-gradient-to-r from-red-500/40 via-slate-800/95 to-cyan-500/40 border border-cyan-500/30 relative overflow-hidden backdrop-blur-md">
         {/* Floating elements */}
         <div className="absolute top-2 right-4 text-3xl opacity-30">🚀</div>
         <div className="absolute top-4 left-1/4 text-xl opacity-20">⭐</div>

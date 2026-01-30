@@ -1,10 +1,10 @@
 .crewmate {
   position: absolute;
-  width: 50px;
+  width: 47px; /* Crop 3px from backpack side */
   height: 52px; /* Crop out the shadow */
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .sprite {
@@ -30,19 +30,21 @@
 /* Walking right - across the screen */
 .walkRight {
   left: 0;
-  -webkit-animation: move-right 25s linear infinite;
-  animation: move-right 25s linear infinite;
+  -webkit-animation: move-right 14s linear infinite;
+  animation: move-right 14s linear infinite;
 }
 
 .walkLeft {
   left: 0;
-  -webkit-animation: move-left 25s linear infinite;
-  animation: move-left 25s linear infinite;
+  -webkit-animation: move-left 14s linear infinite;
+  animation: move-left 14s linear infinite;
 }
 
 .walkLeft .sprite {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  position: relative;
+  left: 5px; /* Crop extra pixel from back when flipped */
 }
 
 @-webkit-keyframes move-right {

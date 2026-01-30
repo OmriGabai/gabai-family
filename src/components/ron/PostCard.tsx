@@ -24,7 +24,7 @@ export function PostCard({ post }: { post: Post }) {
   })
 
   return (
-    <article className="bg-slate-800/70 rounded-3xl shadow-lg overflow-hidden border border-cyan-500/30 hover:border-red-500/50 transition-colors backdrop-blur-sm">
+    <article className="bg-slate-800/95 rounded-3xl shadow-lg overflow-hidden border border-cyan-500/30 hover:border-red-500/50 transition-colors backdrop-blur-md">
       {/* Content */}
       <div className="p-6">
         <h4 className="text-xl font-bold text-cyan-400 mb-2 flex items-center gap-2">
