@@ -12,10 +12,10 @@ const familyMembers = [
   {
     name: 'רון',
     slug: 'ron',
-    title: 'בקרוב...',
+    title: 'החללית של רון',
     emoji: '🚀',
-    color: 'from-blue-400 to-cyan-500',
-    available: false,
+    color: 'from-red-500 to-cyan-500',
+    available: true,
   },
   {
     name: 'יאנה',
