@@ -126,3 +126,51 @@ body {
 .ejected {
   animation: eject 1s ease-in forwards;
 }
+
+/* Among Us walking animations */
+@keyframes walkRight {
+  0% {
+    transform: translateX(-100px) scaleX(1);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) scaleX(1);
+  }
+}
+
+@keyframes walkLeft {
+  0% {
+    transform: translateX(calc(100vw + 100px)) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-100px) scaleX(-1);
+  }
+}
+
+@keyframes walkBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.walk-right {
+  animation: walkRight 20s linear infinite, walkBounce 0.4s ease-in-out infinite;
+}
+
+.walk-left {
+  animation: walkLeft 20s linear infinite, walkBounce 0.4s ease-in-out infinite;
+}
+
+.walk-right-slow {
+  animation: walkRight 30s linear infinite, walkBounce 0.5s ease-in-out infinite;
+}
+
+.walk-left-slow {
+  animation: walkLeft 25s linear infinite, walkBounce 0.45s ease-in-out infinite;
+}
+
+.walk-right-fast {
+  animation: walkRight 15s linear infinite, walkBounce 0.35s ease-in-out infinite;
+}
