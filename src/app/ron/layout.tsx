@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { SecretCrewmate } from '@/components/ron/SecretCrewmate'
+import { SecretTitle } from '@/components/ron/SecretTitle'
 import { WalkingCrewmate } from '@/components/ron/WalkingCrewmate'
 
 export const metadata: Metadata = {
@@ -45,19 +45,13 @@ export default function RonLayout({
 
       {/* Header */}
       <header className="relative">
-        <div className="absolute inset-0 opacity-40">
-          <SecretCrewmate className="absolute top-4 right-10" color="red" />
-          <SecretCrewmate className="absolute top-8 left-20" color="cyan" />
-          <SecretCrewmate className="absolute top-6 left-1/3" color="lime" />
-        </div>
-
         <div className="max-w-4xl mx-auto px-4 py-8 relative">
-          <Link href="/ron" className="block text-center">
-            <h1 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-400 to-cyan-400">
-              🚀 החללית של רון 👨‍🚀
-            </h1>
-            <p className="text-sm text-cyan-400/70 mt-1" dir="ltr">Trust no one... 🔪</p>
-          </Link>
+          <div className="block text-center">
+            <SecretTitle />
+            <Link href="/ron">
+              <p className="text-sm text-cyan-400/70 mt-1" dir="ltr">Trust no one... 🔪</p>
+            </Link>
+          </div>
           <div className="mt-4 h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-cyan-500 rounded-full" />
         </div>
       </header>
