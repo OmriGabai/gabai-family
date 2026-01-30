@@ -1,7 +1,7 @@
 .crewmate {
   position: absolute;
   width: 50px;
-  height: 55px; /* Crop out the shadow */
+  height: 52px; /* Crop out the shadow */
   overflow: hidden;
   pointer-events: none;
   opacity: 0.5;
