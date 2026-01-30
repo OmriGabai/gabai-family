@@ -36,25 +36,49 @@ export default function RonLayout({
         <Image
           src="/images/ron/crewmate.png"
           alt="Crewmate"
-          width={60}
-          height={60}
-          className="absolute bottom-20 right-10 opacity-20 float"
+          width={80}
+          height={80}
+          className="absolute bottom-20 right-10 opacity-30 float"
         />
         <Image
           src="/images/ron/crewmate.png"
           alt="Crewmate"
-          width={40}
-          height={40}
-          className="absolute top-40 left-5 opacity-15 float"
+          width={60}
+          height={60}
+          className="absolute top-40 left-5 opacity-25 float"
           style={{ animationDelay: '1s' }}
+        />
+        <Image
+          src="/images/ron/crewmate.png"
+          alt="Crewmate"
+          width={70}
+          height={70}
+          className="absolute bottom-40 left-20 opacity-20 float"
+          style={{ animationDelay: '2s' }}
         />
         <Image
           src="/images/ron/crewmate.png"
           alt="Crewmate"
           width={50}
           height={50}
-          className="absolute bottom-40 left-20 opacity-10 float"
-          style={{ animationDelay: '2s' }}
+          className="absolute top-60 right-1/4 opacity-25 float"
+          style={{ animationDelay: '0.5s' }}
+        />
+        <Image
+          src="/images/ron/crewmate.png"
+          alt="Crewmate"
+          width={65}
+          height={65}
+          className="absolute bottom-60 right-1/3 opacity-20 float"
+          style={{ animationDelay: '1.5s' }}
+        />
+        <Image
+          src="/images/ron/crewmate.png"
+          alt="Crewmate"
+          width={55}
+          height={55}
+          className="absolute top-80 left-1/4 opacity-15 float"
+          style={{ animationDelay: '2.5s' }}
         />
       </div>
 
