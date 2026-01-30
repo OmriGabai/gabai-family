@@ -1,0 +1,55 @@
+.crewmate {
+  position: absolute;
+  width: 50px;
+  height: 72px;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.sprite {
+  width: 50px;
+  height: 72px;
+  background-image: url('/images/ron/walk-spritesheet.png');
+  background-size: 600px 72px;
+  animation: walk-cycle 0.5s steps(12) infinite;
+}
+
+@keyframes walk-cycle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -600px 0;
+  }
+}
+
+/* Walking right - across the screen */
+.walkRight {
+  animation: move-right 25s linear infinite;
+}
+
+.walkLeft {
+  animation: move-left 25s linear infinite;
+}
+
+.walkLeft .sprite {
+  transform: scaleX(-1);
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}

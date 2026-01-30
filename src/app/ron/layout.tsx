@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { SecretCrewmate } from '@/components/ron/SecretCrewmate'
+import { WalkingCrewmate } from '@/components/ron/WalkingCrewmate'
 
 export const metadata: Metadata = {
   title: 'החללית של רון',
@@ -32,38 +32,15 @@ export default function RonLayout({
         <Star className="absolute top-40 left-10 text-xs opacity-50" />
         <Star className="absolute top-80 right-10 text-sm opacity-30" />
 
-        {/* Walking crewmates - one of each color (Safari compatible) */}
-        <div className="absolute top-32 left-0 right-0 opacity-25 crewmate-walk-right-20" style={{ animationDelay: '-2s' }}>
-          <Image src="/images/ron/crewmate.png" alt="Red" width={50} height={50} />
-        </div>
-
-        <div className="absolute top-48 left-0 right-0 opacity-25 crewmate-walk-left-22" style={{ animationDelay: '-5s' }}>
-          <Image src="/images/ron/crewmate-blue.png" alt="Blue" width={50} height={50} />
-        </div>
-
-        <div className="absolute top-64 left-0 right-0 opacity-25 crewmate-walk-right-28" style={{ animationDelay: '-10s' }}>
-          <Image src="/images/ron/crewmate-cyan.png" alt="Cyan" width={50} height={50} />
-        </div>
-
-        <div className="absolute top-80 left-0 right-0 opacity-25 crewmate-walk-left-24" style={{ animationDelay: '-3s' }}>
-          <Image src="/images/ron/crewmate-green.png" alt="Green" width={50} height={50} />
-        </div>
-
-        <div className="absolute top-[400px] left-0 right-0 opacity-25 crewmate-walk-right-18" style={{ animationDelay: '-15s' }}>
-          <Image src="/images/ron/crewmate-yellow.png" alt="Yellow" width={50} height={50} />
-        </div>
-
-        <div className="absolute top-[480px] left-0 right-0 opacity-25 crewmate-walk-left-26" style={{ animationDelay: '-8s' }}>
-          <Image src="/images/ron/crewmate-orange.png" alt="Orange" width={50} height={50} />
-        </div>
-
-        <div className="absolute top-[560px] left-0 right-0 opacity-25 crewmate-walk-right-21" style={{ animationDelay: '-12s' }}>
-          <Image src="/images/ron/crewmate-pink.png" alt="Pink" width={50} height={50} />
-        </div>
-
-        <div className="absolute top-[640px] left-0 right-0 opacity-25 crewmate-walk-left-30" style={{ animationDelay: '-18s' }}>
-          <Image src="/images/ron/crewmate-black.png" alt="Black" width={50} height={50} />
-        </div>
+        {/* Walking animated crewmates with different hue rotations for colors */}
+        <WalkingCrewmate top="120px" direction="right" speed={20} delay={0} hue={0} />
+        <WalkingCrewmate top="200px" direction="left" speed={22} delay={-5} hue={180} />
+        <WalkingCrewmate top="280px" direction="right" speed={28} delay={-10} hue={140} />
+        <WalkingCrewmate top="360px" direction="left" speed={24} delay={-3} hue={80} />
+        <WalkingCrewmate top="440px" direction="right" speed={18} delay={-15} hue={40} />
+        <WalkingCrewmate top="520px" direction="left" speed={26} delay={-8} hue={280} />
+        <WalkingCrewmate top="600px" direction="right" speed={21} delay={-12} hue={320} />
+        <WalkingCrewmate top="680px" direction="left" speed={30} delay={-18} hue={200} />
       </div>
 
       {/* Header */}
