@@ -30,7 +30,7 @@ export default async function RonHomePage() {
           שלום צוות! 🚀
         </h2>
         <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-          אני רון, ואני <span dir="ltr">Crewmate</span> (או שאני? 🤔).
+          אני רון, ואני <span dir="ltr">Crewmate</span> (<span dir="ltr">or am I? 🤔</span>)
           באתר הזה אני משתף משימות, הרפתקאות בחלל, וחקירות מסתוריות.
           אל תסמכו על אף אחד! 👀
         </p>
