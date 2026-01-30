@@ -1,9 +1,10 @@
 .crewmate {
   position: absolute;
   width: 50px;
-  height: 72px;
+  height: 55px; /* Crop out the shadow */
+  overflow: hidden;
   pointer-events: none;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .sprite {
@@ -11,45 +12,55 @@
   height: 72px;
   background-image: url('/images/ron/walk-spritesheet.png');
   background-size: 600px 72px;
+  background-position: 0 0;
+  -webkit-animation: walk-cycle 0.5s steps(12) infinite;
   animation: walk-cycle 0.5s steps(12) infinite;
 }
 
+@-webkit-keyframes walk-cycle {
+  from { background-position: 0 0; }
+  to { background-position: -600px 0; }
+}
+
 @keyframes walk-cycle {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -600px 0;
-  }
+  from { background-position: 0 0; }
+  to { background-position: -600px 0; }
 }
 
 /* Walking right - across the screen */
 .walkRight {
+  left: 0;
+  -webkit-animation: move-right 25s linear infinite;
   animation: move-right 25s linear infinite;
 }
 
 .walkLeft {
+  left: 0;
+  -webkit-animation: move-left 25s linear infinite;
   animation: move-left 25s linear infinite;
 }
 
 .walkLeft .sprite {
+  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
+@-webkit-keyframes move-right {
+  0% { -webkit-transform: translateX(-80px); transform: translateX(-80px); }
+  100% { -webkit-transform: translateX(100vw); transform: translateX(100vw); }
+}
+
 @keyframes move-right {
-  0% {
-    transform: translateX(-100px);
-  }
-  100% {
-    transform: translateX(100vw);
-  }
+  0% { transform: translateX(-80px); }
+  100% { transform: translateX(100vw); }
+}
+
+@-webkit-keyframes move-left {
+  0% { -webkit-transform: translateX(100vw); transform: translateX(100vw); }
+  100% { -webkit-transform: translateX(-80px); transform: translateX(-80px); }
 }
 
 @keyframes move-left {
-  0% {
-    transform: translateX(100vw);
-  }
-  100% {
-    transform: translateX(-100px);
-  }
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-80px); }
 }
