@@ -127,29 +127,35 @@ body {
   animation: eject 1s ease-in forwards;
 }
 
-/* Among Us walking animations */
+/* Among Us walking animations - Safari compatible */
 @keyframes crewmateWalkRight {
-  from {
+  0% {
+    -webkit-transform: translateX(-100vw);
     transform: translateX(-100vw);
   }
-  to {
+  100% {
+    -webkit-transform: translateX(100vw);
     transform: translateX(100vw);
   }
 }
 
 @keyframes crewmateWalkLeft {
-  from {
+  0% {
+    -webkit-transform: translateX(100vw) scaleX(-1);
     transform: translateX(100vw) scaleX(-1);
   }
-  to {
+  100% {
+    -webkit-transform: translateX(-100vw) scaleX(-1);
     transform: translateX(-100vw) scaleX(-1);
   }
 }
 
-.crewmate-walk-right {
-  animation: crewmateWalkRight var(--walk-duration, 25s) linear infinite;
-}
+.crewmate-walk-right-18 { -webkit-animation: crewmateWalkRight 18s linear infinite; animation: crewmateWalkRight 18s linear infinite; }
+.crewmate-walk-right-20 { -webkit-animation: crewmateWalkRight 20s linear infinite; animation: crewmateWalkRight 20s linear infinite; }
+.crewmate-walk-right-21 { -webkit-animation: crewmateWalkRight 21s linear infinite; animation: crewmateWalkRight 21s linear infinite; }
+.crewmate-walk-right-28 { -webkit-animation: crewmateWalkRight 28s linear infinite; animation: crewmateWalkRight 28s linear infinite; }
 
-.crewmate-walk-left {
-  animation: crewmateWalkLeft var(--walk-duration, 25s) linear infinite;
-}
+.crewmate-walk-left-22 { -webkit-animation: crewmateWalkLeft 22s linear infinite; animation: crewmateWalkLeft 22s linear infinite; }
+.crewmate-walk-left-24 { -webkit-animation: crewmateWalkLeft 24s linear infinite; animation: crewmateWalkLeft 24s linear infinite; }
+.crewmate-walk-left-26 { -webkit-animation: crewmateWalkLeft 26s linear infinite; animation: crewmateWalkLeft 26s linear infinite; }
+.crewmate-walk-left-30 { -webkit-animation: crewmateWalkLeft 30s linear infinite; animation: crewmateWalkLeft 30s linear infinite; }
