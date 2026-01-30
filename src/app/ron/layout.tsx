@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { SecretCrewmate } from '@/components/ron/SecretCrewmate'
 
 export const metadata: Metadata = {
@@ -30,6 +31,31 @@ export default function RonLayout({
         <Star className="absolute top-16 right-1/3 text-sm opacity-40" />
         <Star className="absolute top-40 left-10 text-xs opacity-50" />
         <Star className="absolute top-80 right-10 text-sm opacity-30" />
+
+        {/* Floating crewmates */}
+        <Image
+          src="/images/ron/crewmate.png"
+          alt="Crewmate"
+          width={60}
+          height={60}
+          className="absolute bottom-20 right-10 opacity-20 float"
+        />
+        <Image
+          src="/images/ron/crewmate.png"
+          alt="Crewmate"
+          width={40}
+          height={40}
+          className="absolute top-40 left-5 opacity-15 float"
+          style={{ animationDelay: '1s' }}
+        />
+        <Image
+          src="/images/ron/crewmate.png"
+          alt="Crewmate"
+          width={50}
+          height={50}
+          className="absolute bottom-40 left-20 opacity-10 float"
+          style={{ animationDelay: '2s' }}
+        />
       </div>
 
       {/* Header */}

@@ -1,5 +1,6 @@
 import { PostCard } from '@/components/ron/PostCard'
 import { getPosts } from '@/lib/db'
+import Image from 'next/image'
 
 export const dynamic = 'force-dynamic'
 
@@ -12,9 +13,18 @@ export default async function RonHomePage() {
       <section className="text-center mb-12 p-8 rounded-3xl bg-gradient-to-r from-red-500/20 via-slate-800/50 to-cyan-500/20 border border-cyan-500/30 relative overflow-hidden">
         {/* Floating elements */}
         <div className="absolute top-2 right-4 text-3xl opacity-30">🚀</div>
-        <div className="absolute bottom-2 left-4 text-2xl opacity-30">👨‍🚀</div>
         <div className="absolute top-4 left-1/4 text-xl opacity-20">⭐</div>
         <div className="absolute bottom-4 right-1/4 text-xl opacity-20">🛸</div>
+
+        {/* Crewmate image */}
+        <div className="absolute bottom-2 left-4 opacity-40">
+          <Image
+            src="/images/ron/crewmate.png"
+            alt="Crewmate"
+            width={50}
+            height={50}
+          />
+        </div>
 
         <h2 className="text-2xl md:text-3xl font-bold text-cyan-400 mb-4">
           שלום צוות! 🚀
