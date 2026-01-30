@@ -32,38 +32,38 @@ export default function RonLayout({
         <Star className="absolute top-40 left-10 text-xs opacity-50" />
         <Star className="absolute top-80 right-10 text-sm opacity-30" />
 
-        {/* Walking crewmates - one of each color, same size and opacity */}
-        <Image src="/images/ron/crewmate.png" alt="Red" width={50} height={50}
-          className="top-28 opacity-25 walk-right"
-          style={{ animationDelay: '0s', animationDuration: '20s' }} />
+        {/* Walking crewmates - one of each color */}
+        <div className="absolute top-32 left-0 right-0 opacity-25 crewmate-walk-right" style={{ '--walk-duration': '20s', animationDelay: '0s' } as React.CSSProperties}>
+          <Image src="/images/ron/crewmate.png" alt="Red" width={50} height={50} />
+        </div>
 
-        <Image src="/images/ron/crewmate-blue.png" alt="Blue" width={50} height={50}
-          className="top-44 opacity-25 walk-left"
-          style={{ animationDelay: '-5s', animationDuration: '22s' }} />
+        <div className="absolute top-48 left-0 right-0 opacity-25 crewmate-walk-left" style={{ '--walk-duration': '22s', animationDelay: '-5s' } as React.CSSProperties}>
+          <Image src="/images/ron/crewmate-blue.png" alt="Blue" width={50} height={50} />
+        </div>
 
-        <Image src="/images/ron/crewmate-cyan.png" alt="Cyan" width={50} height={50}
-          className="top-60 opacity-25 walk-right"
-          style={{ animationDelay: '-10s', animationDuration: '28s' }} />
+        <div className="absolute top-64 left-0 right-0 opacity-25 crewmate-walk-right" style={{ '--walk-duration': '28s', animationDelay: '-10s' } as React.CSSProperties}>
+          <Image src="/images/ron/crewmate-cyan.png" alt="Cyan" width={50} height={50} />
+        </div>
 
-        <Image src="/images/ron/crewmate-green.png" alt="Green" width={50} height={50}
-          className="top-80 opacity-25 walk-left"
-          style={{ animationDelay: '-3s', animationDuration: '24s' }} />
+        <div className="absolute top-80 left-0 right-0 opacity-25 crewmate-walk-left" style={{ '--walk-duration': '24s', animationDelay: '-3s' } as React.CSSProperties}>
+          <Image src="/images/ron/crewmate-green.png" alt="Green" width={50} height={50} />
+        </div>
 
-        <Image src="/images/ron/crewmate-yellow.png" alt="Yellow" width={50} height={50}
-          className="bottom-64 opacity-25 walk-right"
-          style={{ animationDelay: '-15s', animationDuration: '18s' }} />
+        <div className="absolute top-[400px] left-0 right-0 opacity-25 crewmate-walk-right" style={{ '--walk-duration': '18s', animationDelay: '-15s' } as React.CSSProperties}>
+          <Image src="/images/ron/crewmate-yellow.png" alt="Yellow" width={50} height={50} />
+        </div>
 
-        <Image src="/images/ron/crewmate-orange.png" alt="Orange" width={50} height={50}
-          className="bottom-48 opacity-25 walk-left"
-          style={{ animationDelay: '-8s', animationDuration: '26s' }} />
+        <div className="absolute top-[480px] left-0 right-0 opacity-25 crewmate-walk-left" style={{ '--walk-duration': '26s', animationDelay: '-8s' } as React.CSSProperties}>
+          <Image src="/images/ron/crewmate-orange.png" alt="Orange" width={50} height={50} />
+        </div>
 
-        <Image src="/images/ron/crewmate-pink.png" alt="Pink" width={50} height={50}
-          className="bottom-32 opacity-25 walk-right"
-          style={{ animationDelay: '-12s', animationDuration: '21s' }} />
+        <div className="absolute top-[560px] left-0 right-0 opacity-25 crewmate-walk-right" style={{ '--walk-duration': '21s', animationDelay: '-12s' } as React.CSSProperties}>
+          <Image src="/images/ron/crewmate-pink.png" alt="Pink" width={50} height={50} />
+        </div>
 
-        <Image src="/images/ron/crewmate-black.png" alt="Black" width={50} height={50}
-          className="top-[50%] opacity-25 walk-left"
-          style={{ animationDelay: '-18s', animationDuration: '30s' }} />
+        <div className="absolute top-[640px] left-0 right-0 opacity-25 crewmate-walk-left" style={{ '--walk-duration': '30s', animationDelay: '-18s' } as React.CSSProperties}>
+          <Image src="/images/ron/crewmate-black.png" alt="Black" width={50} height={50} />
+        </div>
       </div>
 
       {/* Header */}

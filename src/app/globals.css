@@ -128,31 +128,28 @@ body {
 }
 
 /* Among Us walking animations */
-@keyframes walkRight {
-  0% {
-    left: -80px;
+@keyframes crewmateWalkRight {
+  from {
+    transform: translateX(-100vw);
   }
-  100% {
-    left: 100vw;
-  }
-}
-
-@keyframes walkLeft {
-  0% {
-    right: -80px;
-  }
-  100% {
-    right: 100vw;
+  to {
+    transform: translateX(100vw);
   }
 }
 
-.walk-right {
-  animation: walkRight 25s linear infinite;
-  position: absolute;
+@keyframes crewmateWalkLeft {
+  from {
+    transform: translateX(100vw) scaleX(-1);
+  }
+  to {
+    transform: translateX(-100vw) scaleX(-1);
+  }
 }
 
-.walk-left {
-  animation: walkLeft 25s linear infinite;
-  transform: scaleX(-1);
-  position: absolute;
+.crewmate-walk-right {
+  animation: crewmateWalkRight var(--walk-duration, 25s) linear infinite;
+}
+
+.crewmate-walk-left {
+  animation: crewmateWalkLeft var(--walk-duration, 25s) linear infinite;
 }
